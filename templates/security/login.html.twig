@@ -7,7 +7,7 @@
     <div class="col-6 offset-3">
         <form method="post">
             {% if error %}
-                <div class="alert alert-danger">{{ error.messageData }}</div>
+                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
             {% endif %}
 
             <div class="card">
